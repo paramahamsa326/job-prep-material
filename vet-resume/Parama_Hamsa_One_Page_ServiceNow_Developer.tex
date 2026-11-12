@@ -1,0 +1,178 @@
+﻿\documentclass[10pt,letterpaper]{article}
+
+\usepackage[
+    ignoreheadfoot,
+    top=2cm,
+    bottom=2cm,
+    left=2cm,
+    right=2cm,
+    footskip=1cm
+]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{changepage}
+\usepackage{needspace}
+\usepackage{iftex}
+\usepackage[
+    pdftitle={Parama Hamsa Vadlamudi - ServiceNow Developer Resume},
+    pdfauthor={Parama Hamsa Vadlamudi},
+    pdfcreator={LaTeX with RenderCV},
+    colorlinks=true,
+    urlcolor=black
+]{hyperref}
+
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    \usepackage[T1]{fontenc}
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+
+\usepackage{charter}
+
+\raggedright
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt\topsep0pt}
+\pagestyle{empty}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\topskip}{0pt}
+\pagenumbering{gobble}
+
+\titleformat{\section}
+    {\needspace{2\baselineskip}\bfseries\large}
+    {}
+    {0pt}
+    {}
+    [\vspace{1pt}\titlerule]
+
+\titlespacing{\section}{-1pt}{0.20cm}{0.12cm}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
+
+\newenvironment{highlights}{
+    \begin{itemize}[
+        topsep=0pt,
+        parsep=0.10cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=10pt
+    ]
+}{
+    \end{itemize}
+}
+
+\newenvironment{onecolentry}{}{}
+
+\newcommand{\experienceheading}[3]{
+    \noindent\textbf{#1}\hfill\textbf{#2}\hfill\textbf{#3}\par
+    \vspace{-0.14cm}
+}
+
+\begin{document}
+
+\begin{center}
+    \fontsize{25pt}{25pt}\selectfont Parama Hamsa Vadlamudi
+
+    \vspace{5pt}
+
+    \normalsize
+    Seattle, WA, USA (Open to relocate)
+    \hspace{5pt}$|$\hspace{5pt}
+    \href{mailto:paramahamsa326@gmail.com}{paramahamsa326@gmail.com}
+    \hspace{5pt}$|$\hspace{5pt}
+    \href{tel:+14096000518}{+1 409 600 0518}
+\end{center}
+
+\vspace{-0.10cm}
+
+\section{Professional Summary}
+\begin{onecolentry}
+Senior ServiceNow Developer and platform engineer with 8+ years at ServiceNow and 13+ years in software engineering. Experienced in enterprise application development, workflow automation, reusable user experiences, secure integrations, AI Agents, automated testing, and production-ready platform services.
+\end{onecolentry}
+
+\section{Work Experience}
+
+\experienceheading
+    {Senior Software Engineer}
+    {ServiceNow Inc. -- Seattle, WA}
+    {Jan 2018 -- Present}
+\begin{onecolentry}
+\begin{highlights}
+    \item Designed and developed enterprise applications using the ServiceNow Platform, ServiceNow Studio, JavaScript, Business Rules, Client Scripts, ACLs, Flow Designer, Workflow Editor, REST APIs, Java, and microservices.
+    \item Built modular, responsive, WCAG-compliant reusable components using UI Builder, Next Experience UI Framework, Service Portal, CMS, Angular, jQuery, HTML, and CSS.
+    \item Developed AI Agents and Agent Skills in AI Agent Studio, integrating Now Assist and Now LLM to automate case resolution, employee-data summarization, and contextual assistance.
+    \item Integrated ServiceNow with Workday, SCCM, Azure AD, and JAMF using Integration Hub, REST APIs, MID Servers, OAuth 2.0, Basic Authentication, and secure data mapping.
+    \item Created Moveworks HTTP, Script, and Compound Actions using Agent Studio, APIthon, and ServiceNow APIs, enabling conversational assistants to complete employee workflows.
+    \item Engineered Java/Spring and Kafka services supporting ServiceNow applications; applied distributed-system resilience, API security, JVM performance, database tuning, and caching practices.
+    \item Supported AWS, Docker, and Kubernetes workloads with CI/CD and observability using Git, Maven, Jenkins, Postman, Grafana, Prometheus, and Splunk.
+    \item Led ATF and CI/CD automation, mentored developers on scripting, testing, and scalable application architecture, and contributed automation that reduced case-task volume and weekly inflow by 30\%.
+\end{highlights}
+\end{onecolentry}
+
+\vspace{0.04cm}
+
+\experienceheading
+    {Software Developer}
+    {8x8, Inc. -- San Jose, CA}
+    {Sep 2016 -- Dec 2017}
+\begin{onecolentry}
+\begin{highlights}
+    \item Developed scalable Java 8 and Spring Boot microservices and Kafka-based event-driven applications for distributed, cloud-native backend systems.
+    \item Built secure Dell Boomi REST integrations and automated testing and delivery using JUnit, Mockito, Spring Test, Jenkins, Docker, and Kubernetes.
+\end{highlights}
+\end{onecolentry}
+
+\vspace{0.04cm}
+
+\experienceheading
+    {Software Engineer}
+    {OpenText Pvt. Ltd. -- Hyderabad, India}
+    {Feb 2013 -- Dec 2014}
+\begin{onecolentry}
+\begin{highlights}
+    \item Implemented secure backend logic and developed unit, integration, and end-to-end tests using JUnit, Mockito, and Selenium.
+    \item Improved peak-load response time by 10\% by eliminating Hibernate N+1 queries, tuning SQL indexes and JDBC connection pools, and reducing JVM heap pressure and garbage-collection pauses.
+\end{highlights}
+\end{onecolentry}
+
+\section{Technologies}
+
+\begin{onecolentry}
+\textbf{ServiceNow:} AI Studio, Moveworks, NAE, CMDB, ATF, Creator Studio, Now Mobile, Now Assist, UI Builder, Next Experience, Service Portal, CMS, ServiceNow Studio, Flow Designer, Workflow Editor, Business Rules, Client Scripts, ACLs, Integration Hub, MID Server
+\end{onecolentry}
+
+\vspace{0.04cm}
+\begin{onecolentry}
+\textbf{AI and Integrations:} AI Agent Studio, AI Agents, Agent Skills, Now Assist, Now LLM, REST APIs, OAuth 2.0, Moveworks Agent Studio, APIthon
+\end{onecolentry}
+
+\vspace{0.04cm}
+\begin{onecolentry}
+\textbf{Languages and Frameworks:} Java 17/21, JavaScript, HTML, CSS, Spring Boot, Angular, jQuery, Kafka
+\end{onecolentry}
+
+\vspace{0.04cm}
+\begin{onecolentry}
+\textbf{Cloud and Tools:} AWS, Docker, Kubernetes, Git, Maven, Jenkins, Postman, Grafana, Prometheus, Splunk, Agile
+\end{onecolentry}
+
+\section{Education}
+
+\begin{tabularx}{\textwidth}{@{}X>{\raggedleft\arraybackslash}p{2.5cm}@{}}
+    \textbf{M.S. -- Computer Science}, Lamar University, Beaumont, USA & 2015 -- 2016 \\
+    \textbf{B.Tech. -- Electronics and Communication Engineering}, Vignan University, Guntur, India & 2009 -- 2013
+\end{tabularx}
+
+\end{document}
+
+
+
+
+
+
+
+
+
