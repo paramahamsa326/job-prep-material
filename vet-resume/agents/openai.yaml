@@ -1,0 +1,4 @@
+interface:
+  display_name: "Vet and Build Resume"
+  short_description: "Tailor evidence-based technical resumes"
+  default_prompt: "Use $vet-resume to assess and tailor my resume for this role using only verified evidence."

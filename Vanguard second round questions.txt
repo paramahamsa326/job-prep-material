@@ -1,0 +1,16 @@
+1. How do you scale applications in AWS EKS (Elastic Kubernetes Service)? and what is EKS?
+
+2. How do you handle high-traffic bursts (e.g., 50,000 RPM / Requests Per Minute) and protect backend services?
+
+3. How do you prevent database overload during high traffic, and how do you configure retries and connection pooling?
+
+4. What is the difference between connection timeout, socket timeout, and database query timeout?
+
+5. Why is a connection timeout still needed if you are using a connection pool?
+
+6. How do you handle fan-out calls to multiple (e.g., 5) downstream microservices efficiently without blocking?
+
+7. What are the top 5 things you look for when reviewing a Pull Request (PR)?
+
+8. How do you specifically evaluate thread safety and concurrency in a PR review?
+

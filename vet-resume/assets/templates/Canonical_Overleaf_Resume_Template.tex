@@ -1,0 +1,275 @@
+\documentclass[10pt, letterpaper]{article}
+
+% Packages:
+\usepackage[
+    ignoreheadfoot, % set margins without considering header and footer
+    top=2 cm, % seperation between body and page edge from the top
+    bottom=2 cm, % seperation between body and page edge from the bottom
+    left=2 cm, % seperation between body and page edge from the left
+    right=2 cm, % seperation between body and page edge from the right
+    footskip=1.0 cm, % seperation between body and footer
+    % showframe % for debugging 
+]{geometry} % for adjusting page geometry
+\usepackage{titlesec} % for customizing section titles
+\usepackage{tabularx} % for making tables with fixed width columns
+\usepackage{array} % tabularx requires this
+\usepackage[dvipsnames]{xcolor} % for coloring text
+\definecolor{primaryColor}{RGB}{0, 0, 0} % define primary color
+\usepackage{enumitem} % for customizing lists
+\usepackage{fontawesome5} % for using icons
+\usepackage{amsmath} % for math
+\usepackage[
+    pdftitle={Param SN Resume's CV},
+    pdfauthor={Parama Hamsa},
+    pdfcreator={LaTeX with RenderCV},
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref} % for links, metadata and bookmarks
+\usepackage[pscoord]{eso-pic} % for floating text on the page
+\usepackage{calc} % for calculating lengths
+\usepackage{bookmark} % for bookmarks
+\usepackage{lastpage} % for getting the total number of pages
+\usepackage{changepage} % for one column entries (adjustwidth environment)
+\usepackage{paracol} % for two and three column entries
+\usepackage{ifthen} % for conditional statements
+\usepackage{needspace} % for avoiding page brake right after the section title
+\usepackage{iftex} % check if engine is pdflatex, xetex or luatex
+
+% Ensure that generate pdf is machine readable/ATS parsable:
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    \usepackage[T1]{fontenc}
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+
+\usepackage{charter}
+
+% Some settings:
+\raggedright
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt} % remove space before adjustwidth environment
+\pagestyle{empty} % no header or footer
+\setcounter{secnumdepth}{0} % no section numbering
+\setlength{\parindent}{0pt} % no indentation
+\setlength{\topskip}{0pt} % no top skip
+\setlength{\columnsep}{0.15cm} % set column seperation
+\pagenumbering{gobble} % no page numbering
+
+\titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
+
+\titlespacing{\section}{
+    % left space:
+    -1pt
+}{
+    % top space:
+    0.3 cm
+}{
+    % bottom space:
+    0.2 cm
+} % section title spacing
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$} % custom bullet points
+\newenvironment{highlights}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=0 cm + 10pt
+    ]
+}{
+    \end{itemize}
+} % new environment for highlights
+
+
+\newenvironment{highlightsforbulletentries}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=10pt
+    ]
+}{
+    \end{itemize}
+} % new environment for highlights for bullet entries
+
+\newenvironment{onecolentry}{
+    \begin{adjustwidth}{
+        0 cm + 0.00001 cm
+    }{
+        0 cm + 0.00001 cm
+    }
+}{
+    \end{adjustwidth}
+} % new environment for one column entries
+
+\newenvironment{twocolentry}[2][]{
+    \onecolentry
+    \def\secondColumn{#2}
+    \setcolumnwidth{\fill, 4.5 cm}
+    \begin{paracol}{2}
+}{
+    \switchcolumn \raggedleft \secondColumn
+    \end{paracol}
+    \endonecolentry
+} % new environment for two column entries
+
+\newenvironment{threecolentry}[3][]{
+    \onecolentry
+    \def\thirdColumn{#3}
+    \setcolumnwidth{, \fill, 4.5 cm}
+    \begin{paracol}{3}
+    {\raggedright #2} \switchcolumn
+}{
+    \switchcolumn \raggedleft \thirdColumn
+    \end{paracol}
+    \endonecolentry
+} % new environment for three column entries
+
+\newenvironment{header}{
+    \setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.5}
+}{
+    \par\kern\topsep
+} % new environment for the header
+
+\newcommand{\placelastupdatedtext}{% \placetextbox{<horizontal pos>}{<vertical pos>}{<stuff>}
+  \AddToShipoutPictureFG*{% Add <stuff> to current page foreground
+    \put(
+        \LenToUnit{\paperwidth-2 cm-0 cm+0.05cm},
+        \LenToUnit{\paperheight-1.0 cm}
+    ){\vtop{{\null}\makebox[0pt][c]{
+        \small\color{gray}\textit{Last updated in July 2026}\hspace{\widthof{Last updated in July 2026}}
+    }}}%
+  }%
+}%
+
+% save the original href command in a new command:
+\let\hrefWithoutArrow\href
+
+% new command for external links:
+
+
+\begin{document}
+    \newcommand{\AND}{\unskip
+        \cleaders\copy\ANDbox\hskip\wd\ANDbox
+        \ignorespaces
+    }
+    \newsavebox\ANDbox
+    \sbox\ANDbox{$|$}
+
+    \begin{header}
+        \fontsize{25 pt}{25 pt}\selectfont Parama Hamsa Vadlamudi
+
+        \vspace{5 pt}
+
+        \normalsize
+        \mbox{Seattle, WA, USA(Open to relocate)}%
+        \kern 5.0 pt%
+        \AND%
+        \kern 5.0 pt%
+        \mbox{\hrefWithoutArrow{mailto:paramahamsa326@gmail.com}{paramahamsa326@gmail.com}}%
+        \kern 5.0 pt%
+        \AND%
+        \kern 5.0 pt%
+        \mbox{\hrefWithoutArrow{tel:+1-409-600-05-18}{+1 409 600 0518}}%
+    \end{header}
+
+    \vspace{5 pt - 0.3 cm}
+ \section{Work Experience}
+
+
+
+        
+    \begin{twocolentry}{
+            \textbf {Jan 2018 – Present}
+        }
+            \textbf{Senior Software Engineer} \hspace{3.2cm}\textbf{ServiceNow Inc. -- Seattle, WA}\end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Designed and developed enterprise-grade applications using ServiceNow Platform, Java, JavaScript,  REST APIs, Microservices and AI Integration
+                \item Developed AI Agents and Agent Skills using AI Agent Studio, integrating with Now Assist AI and Now LLM to automate case resolution, employee data summarization, and contextual assistance
+                \item Integrated ServiceNow with third-party systems (Workday, SCCM, Azure AD, JAMF) using Integration Hub, REST APIs, and MID Servers with OAuth 2.0 and Basic Auth
+                \item Reduced RTT and INP time to under 10 sec through query optimization, lazy loading, indexing
+                \item Designed Moveworks flows for AI agents for assistants to consume ServiceNow APIs to help employees complete tasks seamlessly 
+                \item Built modular, WCAG-compliant, Responsive, reusable UI components for App BUs with Next Experience UI Framework, Service Portal and Angular
+                \item Led automation and CI/CD efforts using ATF, Git, Jenkins, and Postman, mentored developers on scripting, testing strategies, and scalable app architecture and reduced the case tasks volume and weekly inflow by 30\%
+            \end{highlights}
+        \end{onecolentry}
+
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+           \textbf {Sep 2016 – Dec 2017}
+        }
+            \textbf{Software Developer} \hspace{4.3cm}\textbf {8x8, Inc. -- San Jose, CA}\end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Developed and maintained high-performance microservices using Java 8, Spring Boot, and Maven, supporting scalable, distributed backend systems in a cloud-native environment
+                \item Built and deployed real-time, event-driven applications using Apache Kafka for asynchronous communication and data streaming between services
+                \item Designed and RESTful integrations using Dell Boomi, enabling secure and seamless connectivity between internal systems and third-party platforms
+                \item Ensured code quality and release automation through JUnit, Mockito, Spring Test for unit testing, and Jenkins, Docker, and Kubernetes for CI/CD and container orchestration
+
+            \end{highlights}
+        \end{onecolentry}
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+            \textbf {Feb 2013 – Dec 2014}
+        }
+            \textbf{Software Engineer} \hspace{3.2cm}\textbf {OpenText PVT.LTD -- Hyderabad, India}\end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Implemented backend logic for corporate social network, secure data processing, ensuring the system stayed accurate and reliable during high-activity period
+                \item Developed unit and integration tests using JUnit 4, Mockito, and Selenium to validate business logic, database interactions, and end-to-end functionality
+                \item Improved peak-load response time by 10\% by eliminating Hibernate N+1 queries, tuning SQL indexes and JDBC connection pools, and reducing JVM heap pressure and GC pauses
+
+            \end{highlights}
+        \end{onecolentry}
+   
+
+ \section{Technologies}
+
+        \begin{onecolentry}
+            \textbf{Languages:} Java (17, 21), JavaScript, TypeScript, C\#, HTML, CSS
+        \end{onecolentry}
+      \vspace{0.2 cm}
+        \begin{onecolentry}
+            \textbf{Frameworks:} Micro services Spring Boot, React, Angular, JQuery, Mockito, Selenium, Junit, Playwright
+        \end{onecolentry}
+        \vspace{0.2 cm}
+
+        \begin{onecolentry}
+            \textbf{Technologies:} AWS, Docker, Kubernetes, Kafka
+        \end{onecolentry}
+        
+          \vspace{0.2 cm}
+        \begin{onecolentry}
+            \textbf{Databases:} MySQL, MongoDB, DynamoDB, PostgreSQL, Redis
+        \end{onecolentry}
+         \vspace{0.2 cm}
+         \begin{onecolentry}
+            \textbf{Tools:} IntelliJ, AI Assisted Coding, Prompt Engineering, AI skill creation, Git, Docker, Kubernetes, Agile
+        \end{onecolentry}
+
+
+
+         \section{Education}
+        \begin{twocolentry}{
+          2015-2016
+        }
+            \textbf{M.S - Computer Science} (Lamar university, Beaumont, USA)\end{twocolentry}            
+       \begin{twocolentry}{
+          2009-2013
+        }
+         \textbf{B.Tech - ECE}  (Vignan University, Gunturu, India)\end{twocolentry}
+
+\end{document}

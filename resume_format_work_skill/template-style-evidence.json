@@ -1,0 +1,136 @@
+{
+  "input": "C:\\Users\\yetuk\\OneDrive\\Desktop\\Param Sr. SDE\\resume_harika_format_work\\Harika_reference.docx",
+  "fonts_by_char_count": {
+    "Calibri": 16710,
+    "Times New Roman": 286
+  },
+  "direct_run_formatting_runs": 870,
+  "direct_paragraph_formatting_paragraphs": 232,
+  "heading_like_paragraphs_not_heading_style": [
+    {
+      "para_index": 1,
+      "text": "                                                      HARIKA YETUKURI",
+      "style": "normal"
+    },
+    {
+      "para_index": 2,
+      "text": "                                              harika.yetukuri2016@gmail.com",
+      "style": "normal"
+    },
+    {
+      "para_index": 3,
+      "text": "                                                        +1 360-399-6489",
+      "style": "normal"
+    },
+    {
+      "para_index": 5,
+      "text": "PROFESSIONAL SUMMARY",
+      "style": "normal"
+    },
+    {
+      "para_index": 17,
+      "text": "Expertise in building front-end applications using Angular, HTML and Bootstrap",
+      "style": "normal"
+    },
+    {
+      "para_index": 41,
+      "text": "Software Dev Engineer",
+      "style": "normal"
+    },
+    {
+      "para_index": 76,
+      "text": "Fullstack Java Developer",
+      "style": "normal"
+    },
+    {
+      "para_index": 106,
+      "text": "Senior Java Developer",
+      "style": "normal"
+    },
+    {
+      "para_index": 123,
+      "text": "Worked with Jetty, Apache Tomcat web servers for deploying the web applications",
+      "style": "normal"
+    },
+    {
+      "para_index": 124,
+      "text": "Used Jenkins as a build tool and for deploying the modules to server",
+      "style": "normal"
+    },
+    {
+      "para_index": 129,
+      "text": "Used Agile/Scrum as the working environment for this project",
+      "style": "normal"
+    },
+    {
+      "para_index": 135,
+      "text": "Java Developer\t",
+      "style": "normal"
+    },
+    {
+      "para_index": 166,
+      "text": "Jr. Java Developer",
+      "style": "normal"
+    }
+  ],
+  "examples": {
+    "direct_paragraph_formatting": [
+      {
+        "para_index": 1,
+        "text": "                                                      HARIKA YETUKURI",
+        "style": "normal"
+      },
+      {
+        "para_index": 2,
+        "text": "                                              harika.yetukuri2016@gmail.com",
+        "style": "normal"
+      },
+      {
+        "para_index": 3,
+        "text": "                                                        +1 360-399-6489",
+        "style": "normal"
+      },
+      {
+        "para_index": 4,
+        "text": "",
+        "style": "normal"
+      },
+      {
+        "para_index": 5,
+        "text": "PROFESSIONAL SUMMARY",
+        "style": "normal"
+      }
+    ],
+    "direct_run_formatting": [
+      {
+        "para_index": 1,
+        "run_text": "                                                      ",
+        "style": "normal"
+      },
+      {
+        "para_index": 1,
+        "run_text": "HARIKA YETUKURI",
+        "style": "normal"
+      },
+      {
+        "para_index": 2,
+        "run_text": "                                              ",
+        "style": "normal"
+      },
+      {
+        "para_index": 2,
+        "run_text": "harika.yetukuri2016@gmail.com",
+        "style": "normal"
+      },
+      {
+        "para_index": 3,
+        "run_text": "                                                        +1 360-399-6489",
+        "style": "normal"
+      }
+    ]
+  },
+  "notes": [
+    "Direct formatting is not always wrong, but it often causes inconsistent output when templates change.",
+    "Heading-like paragraphs not using Heading styles can break TOC and accessibility."
+  ]
+}
